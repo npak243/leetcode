@@ -3,19 +3,22 @@ Author: npak243
 Solution: It's a simple approach and could be improved
 --------------------------------------------------------
 Example 1:
-Input: s = "anagram", t = "nagaram"
-Output: true
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
 Example 2:
-Input: s = "rat", t = "car"
-Output: false
+Input: strs = [""]
+Output: [[""]]
 
+Example 3:
+Input: strs = ["a"]
+Output: [["a"]]
 """
 
 
-def is_anagram(s: str, t: str) -> bool:
+def group_anagram(s: str, t: str) -> bool:
     """
-    https://leetcode.com/problems/valid-anagram/
+    https://leetcode.com/problems/group-anagrams
     """
     if len(s) != len(t):
         return False
@@ -28,6 +31,3 @@ def is_anagram(s: str, t: str) -> bool:
         return True
 
     return False
-
-
-print(is_anagram("rat", "cat"))
